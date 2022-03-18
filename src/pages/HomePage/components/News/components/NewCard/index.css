@@ -73,3 +73,11 @@
 .news-card:hover div {
     color: white;
 }
+.news-card-more-details a{
+    text-decoration: none;
+    color:#2F80ED;
+}
+.news-card:hover a {
+    color: white;
+    transition: 200ms;
+}

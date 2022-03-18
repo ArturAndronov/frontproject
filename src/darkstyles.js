@@ -23,7 +23,19 @@ body{
   color:white;
 }
 .directions-card{
-  border-radius: 80px;
+  border-radius: 60px;
+}
+.news-link a,.schedule-link a,.questions-link a{
+  color:white;
+}
+.header-menu a{
+  color:white;
+}
+.list-teachers-grid{
+  color:white;
+}
+.hide + label{
+  background:#ccc;
 }
 
 `

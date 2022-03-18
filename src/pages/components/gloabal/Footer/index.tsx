@@ -10,11 +10,11 @@ const Footer = () => {
     return (
         <div className={"footer"}>
             <div className={"footer-menu"}>
-                <div>Главная</div>
-                <div>Преподовалтели</div>
-                <div>Новости </div>
-                <div>Расписание</div>
-                <div>Вопрос-ответ</div>
+                <a href="/">Главная</a>
+                <a href="http://localhost:3000/#prep">Преподаватели</a>
+                <a href="/news">Новости </a>
+                <a href="/schedule">Расписание</a>
+                <a href="/questions">Вопрос-ответ</a>
             </div>
             <div className={'footer-right-path'}>
                 <div className={'footer-soc-seti-wrapper'}>

@@ -28,7 +28,7 @@ const NewsCard = (props:NewsCardProps) => {
             <div className={'news-card-title'}>{renderTextWithSpread(title, 70)}</div>
             <div className={'news-card-description'}>{renderTextWithSpread(description, 120)}</div>
             <div className={'news-card-footer'}>
-                <div className={'news-card-more-details'}>подробнее...</div>
+                <div className={'news-card-more-details'}><a href="">подробнее...</a></div>
                 <div className={'news-card-data'}>{dayjs(data).format("DD.MM.YY")}</div>
             </div>
         </div>

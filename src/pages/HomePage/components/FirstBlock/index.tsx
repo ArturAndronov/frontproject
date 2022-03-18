@@ -2,7 +2,10 @@ import React from "react";
 import "./index.css";
 import images from "../../../../assets/image";
 import Counter from "./components/Counter";
-
+const clickfirstblock = () => {
+  
+    
+}
 const FirstBlock = () => {
     return (
         <div className={'first-block'}>
@@ -13,7 +16,9 @@ const FirstBlock = () => {
                         <div className='first_block-name'>Информатика и программная инженерия</div>
                         <div className='first_block-name_of_university'>Рыбницкий филиал ПГУ им. Т.Г.Шевченко</div>
                     </div>
-                    <button className={"first_block-about-department"}>О кафедре</button>
+                    <form action="http://localhost:3000/?#history">
+                        <button className={"first_block-about-department"}  onClick={clickfirstblock}>О кафедре</button>
+                    </form>
                 </div>
                 <img src={images.firstBlockImg} alt="firstBlockImg"/>
             </div>

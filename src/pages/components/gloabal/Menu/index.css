@@ -45,6 +45,9 @@
     width: 300px;
     background: white;
 }
+.menu-content a{
+    text-decoration: none;
+}
 
 .menu-content-wrapper {
     transition: 400ms;

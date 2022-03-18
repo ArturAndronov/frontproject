@@ -12,23 +12,27 @@ const Theme = (props) =>{
     //              : window.localStorage.setItem('theme','light')
     //      }
     // })
-    var date = new Date();
+
+
+    // var date = new Date();
      useEffect (() => {
         if(window.localStorage.getItem('theme') === 'dark')
         {
             switchDarkTheme();
         }
-        else if(window.localStorage.getItem('theme') === 'white')
-        {
-            switchWhiteTheme();
-        }
-        else if(date.getHours() >= 18){
-            switchDarkTheme();
-        }
+    //     else if(window.localStorage.getItem('theme') === 'white')
+    //     {
+    //         switchWhiteTheme();
+    //     }
+    //     else if(date.getHours() >= 18){
+    //         switchDarkTheme();
+    //     }
         else{
             window.localStorage.setItem('theme','light');
         }
      })
+
+
 
     const switchDarkTheme = () => {
         window.localStorage.setItem('theme','dark')

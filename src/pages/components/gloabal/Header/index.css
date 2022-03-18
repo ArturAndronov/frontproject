@@ -40,6 +40,23 @@
 .header-menu .active {
     border-bottom: 3px solid #2F97ED;
 }
+.header-menu a {
+    text-decoration: none; /* Убираем подчёркивание */
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: 400ms;
+}
+.header-menu a:hover {
+    border-bottom: 3px solid #65a7ea;
+}
+
 .header-login {
     font-family: 'Montserrat-Bold', sans-serif;
     font-style: normal;
@@ -56,6 +73,8 @@
 .header-login:hover {
     color: rgb(146, 171, 219);
 }
+
+
 
 @media (max-width: 1300px) {
     .header-main-wrapper {

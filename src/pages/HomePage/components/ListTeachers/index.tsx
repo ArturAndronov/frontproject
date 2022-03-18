@@ -1,7 +1,9 @@
-import React from "react";
 import "./index.css";
 import Teacher from "./components/People";
 import images from "../../../../assets/image";
+import {useEffect} from "react"
+import React, { useState } from "react";
+import axios from "axios"
 
 let teachers = [
     {
@@ -105,16 +107,30 @@ let teachers = [
 ];
 
 const ListTeachers = () => {
+
+    const [users,setUsers]:any[] = useState([])
+
+    useEffect (() => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users`)
+          .then(res => {
+            const persons = res.data.items;
+            console.log (persons)
+            setUsers(persons);
+          })
+      },[])
+
+    
     return (
-        <div className={"list-teachers"}>
-            <div className={"list-teachers-title"}>
+        <div className={"list-teachers"} >
+            <div className={"list-teachers-title"} id="prep">
                 Список преподавателей
             </div>
             <div className={"list-teachers-grid"}>
-                {teachers.map((teacher, index) => (
+                {users.map((teacher:any, index:number) => (
                     <Teacher
-                        key={`${index}-${teacher.lastName}`}
-                        item={teacher}
+                        key={`${index}-${teacher.name}`}
+                        firstName={teacher.name}
+                        // lastName={teacher.lastName}
                     />
                 ))}
             </div>

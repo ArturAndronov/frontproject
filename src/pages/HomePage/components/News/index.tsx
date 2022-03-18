@@ -14,7 +14,7 @@ const News = () => {
                 <NewCardWithCard data={news} />
             </div>
             <div className={"list-teachers-read-more"}>
-                Посмотреть все
+                <a href="/news">Посмотреть все</a>
             </div>
         </div>
     );

@@ -1,0 +1,25 @@
+.news-link a{
+    text-decoration: none;
+    margin-right: 15px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #3E4554;
+
+}
+.news-link a span{
+    margin-left: 15px;
+}
+.news-link{
+    margin-bottom: 43px;
+}
+.news{
+    padding: 140px 165px
+}

@@ -22,6 +22,7 @@ const Menu = () => {
 
     const clickElement = () => {
         setIsOpen(false)
+        
     }
 
     return (
@@ -45,18 +46,18 @@ const Menu = () => {
                                 </div>
                             </div>
                             <div className={'menu-content-header-status'}>
-                                <div className={'menu-content-header-item'} onClick={clickElement}>
+                                <a href="/des1" className={'menu-content-header-item'} onClick={clickElement}>
                                     <LampSVG className={'menu-content-header-item-icon'}/>
                                     Абитуриент
-                                </div>
-                                <div className={'menu-content-header-item'} onClick={clickElement}>
+                                </a>
+                                <a href="/schedule" className={'menu-content-header-item'} onClick={clickElement}>
                                     <HeadSVG className={'menu-content-header-item-icon'}/>
                                     Студент
-                                </div>
-                                <div className={'menu-content-header-item'} onClick={clickElement}>
+                                </a>
+                                <a href="/schedule" className={'menu-content-header-item'} onClick={clickElement}>
                                     <OpenBookSVG className={'menu-content-header-item-icon'}/>
                                     Преподователь
-                                </div>
+                                </a>
                             </div>
                             <div>
                                 <div className={'menu-content-header-item'} onClick={clickElement}>
@@ -66,30 +67,30 @@ const Menu = () => {
                             </div>
                         </div>
                         <div className={'menu-content-links'}>
-                            <div className={'menu-content-header-item'} onClick={clickElement}>
+                            <a href="/des1" className={'menu-content-header-item'} onClick={clickElement}>
                                 <TabletSVG className={'menu-content-header-item-icon'}/>
                                 Направления
-                            </div>
-                            <div className={'menu-content-header-item'} onClick={clickElement}>
+                            </a>
+                            <a href="/" className={'menu-content-header-item'} onClick={clickElement}>
                                 <ClosedBookSVG className={'menu-content-header-item-icon'}/>
                                 Правила приема
-                            </div>
-                            <div className={'menu-content-header-item'} onClick={clickElement}>
+                            </a>
+                            <a href="/" className={'menu-content-header-item'} onClick={clickElement}>
                                 <GridSVG className={'menu-content-header-item-icon'}/>
                                 Тестирование
-                            </div>
-                            <div className={'menu-content-header-item'} onClick={clickElement}>
+                            </a>
+                            <a href="http://localhost:3000/#prep" className={'menu-content-header-item'} onClick={clickElement}>
                                 <FolderSVG className={'menu-content-header-item-icon'}/>
                                 Преподаватели
-                            </div>
-                            <div className={'menu-content-header-item'} onClick={clickElement}>
+                            </a>
+                            <a href="/questions" className={'menu-content-header-item'} onClick={clickElement}>
                                 <ArrowsSVG className={'menu-content-header-item-icon'}/>
                                 Вопрос-ответ
-                            </div>
-                            <div className={'menu-content-header-item'} onClick={clickElement}>
+                            </a>
+                            <a href="/news" className={'menu-content-header-item'} onClick={clickElement}>
                                 <TimeSVG className={'menu-content-header-item-icon'}/>
                                 Новости
-                            </div>
+                            </a>
                         </div>
                         <div className={'menu-content-phone'}>
                             <div className={'menu-content-header-item'} onClick={clickElement}>

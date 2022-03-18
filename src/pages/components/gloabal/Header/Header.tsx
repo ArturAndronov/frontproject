@@ -1,8 +1,7 @@
 import React from "react";
 import './index.css'
 import images from "../../../../assets/image";
-import switchDarkTheme from "../../Layout.js";
-import ld from "../../Layout.js";
+
 
 const Header = () => {
 
@@ -11,11 +10,11 @@ const Header = () => {
             <div className={'header-wrapper'}>
                 <img src={images.logo} alt="logo"/>
                 <div className={'header-menu'}>
-                    <div className={'active'}>Главная</div>
-                    <div>Преподовалтели</div>
-                    <div>Новости</div>
-                    <div>Расписание</div>
-                    <div>Вопрос-ответ</div>
+                        <a href="/">Главная</a>
+                        <a href="http://localhost:3000/#prep">Преподаватели</a>
+                        <a href="/news">Новости</a>
+                        <a href="/schedule">Расписание</a>
+                        <a href="/questions">Вопрос-ответ</a>
                     <div className="switch-btn">
                         <button className="switch" onClick= { () =>{
                         window.localStorage.setItem('theme','white')

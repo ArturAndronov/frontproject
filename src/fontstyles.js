@@ -1,5 +1,5 @@
 const fontstyles = `
-.department-history-info-description,.info-la-name-secondName{
+.department-history-info-description,.info-la-name-secondName,.news-tab{
     font-size:25px;
 }
 .department-history-info-title,.list-teachers-title{
@@ -22,6 +22,12 @@ const fontstyles = `
 }
 .news-card-description,.news-card-more-details{
     font-size:14px;
+}
+.list-teachers-grid{
+    font-size: 18px;
+}
+.news-link a,.schedule-link a,.questions-link a{
+    font-size:16px;
 }
 `
 export default fontstyles

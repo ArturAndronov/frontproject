@@ -1,0 +1,129 @@
+.hide {
+    display: none; 
+}
+.hide + label ~ div{
+    display: none;
+}
+/* оформляем текст label */
+.hide + label {
+    transition: 300ms ease-in-out;
+    background: #FFFFFF;
+    border: 1px solid #D3DBE6;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 15px;
+
+    color: #000000;
+    padding: 30px 21px;
+    cursor: pointer;
+    display: inline-block; 
+    width: 1200px;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    border-bottom: 0;
+    background: rgba(47, 128, 237, 0.1);
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 15px;
+
+    color: #000000;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    background: #ededed;
+    border-radius: 30px;
+    display: block; 
+    border: 1px solid #D3DBE6;
+    padding: 30px 95px 25px 20px;
+    width: 1200px;
+}
+.question-text{
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+
+    text-align: justify;
+    text-indent: 22px;
+
+    color: #000000;
+}
+.label-content-item-icon{
+    display: inline-block;
+    margin-left: 630px;
+}
+.questions-switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 35px;
+    background: #2F97ED;
+    border-radius: 60px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 400ms;
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+    width: 200px;
+    height: 46px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    margin-top: 53px;
+    margin-left: 654px;
+}
+.questions-switch:hover {
+    background: #FFFFFF;
+    color: #2F97ED;
+    border: 2px solid #2F97ED;
+}
+
+@media (max-width: 1100px) {
+    .questions-link{
+        margin-top: 40px;
+    }
+    .hide + label {
+        padding: 30px 21px;
+        width: 900px ;
+    }
+    .hide:checked + label + div {
+        border: 2px solid #D3DBE6;
+        padding: 30px 95px 25px 20px;
+        width: 900px;
+    }
+    .questions-switch{
+        margin-left: 370px;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .questions-link{
+        margin-top: 40px;
+    }
+    .hide + label {
+        padding: 20px 15px;
+        width: 370px ;
+    }
+    .hide:checked + label + div {
+        border: 2px solid #D3DBE6;
+        padding: 10px 25px 10px 25px;
+        width: 370px;
+    }
+    .questions-switch{
+        margin-left: 90px;
+    }
+    
+}

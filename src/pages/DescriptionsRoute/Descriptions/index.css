@@ -1,0 +1,92 @@
+.description-destination-link {
+    padding: 140px 0px 15px 150px;
+    display: flex;
+    align-items: center;
+}
+.description-destination-link a{
+    text-decoration: none;
+    margin-right: 15px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+
+    letter-spacing: 0.05em;
+
+    color: #3E4554;
+}
+.description-destination-link a span{
+    margin-left: 15px;
+}
+.destination{
+    padding: 27px 165px 0px 165px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: row;
+}
+.description-destination-info-wrapper {
+    width: 629.11px;
+    height: 728px;
+    margin-right: 350px;
+}
+
+.description-destination-info-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+}
+
+.description-destination-info {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+}
+.description-destination-info span{
+    color:#2F80ED;
+
+}
+.description-destination{  
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #3E4554;
+}
+.description-destination span{
+    font-weight: bold;
+}
+.directions-card{
+    margin-bottom: 20px;
+}
+.description-destination-cards a{
+    text-decoration: none;
+}
+@media (max-width: 1100px) {
+    .destination {
+        padding: 60px 65px !important;
+    }
+    .description-destination-link {
+        padding: 100px 0px 15px 20px;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .destination {
+        padding: 60px 15px !important;
+    }
+    .description-destination-link {
+        padding: 100px 0px 15px 20px;
+    }
+}
+

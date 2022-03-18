@@ -13,6 +13,9 @@
     justify-content: space-between;
     min-height: 190px;
 }
+.directions-card div{
+    color: #3E4554;
+}
 
 .directions-card:hover {
     background: #2F80ED;

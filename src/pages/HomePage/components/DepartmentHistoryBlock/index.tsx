@@ -7,8 +7,8 @@ import BurgerSVGbg from "../../../components/gloabal/UI/SVGComponents/BurgerSVGb
 const DepartmentHistoryBlock = () => {
     return (
         <div className={"department-history"}>
-            <div className={"department-history-info-wrapper"}>
-                <div className={"department-history-info-title"}>История кафедры</div>
+            <div className={"department-history-info-wrapper"} id="history">
+                <div className={"department-history-info-title" } >История кафедры</div>
                 <div className={"department-history-info-description"}>
                     Кафедра «Информатика и программная инженерия» сформирована в 2015 году в рамках реорганизации кафедры «Физика, математика и
                     информатика», успешно функционировавшей с 1994 года, со дня образования инженерно-педагогического факультета ПГУ им. Т.Г. Шевченко

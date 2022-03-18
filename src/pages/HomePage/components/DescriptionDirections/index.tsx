@@ -1,6 +1,7 @@
 import React from "react";
 import DirectionsCard from "./components/DirectionsCard";
 import "./index.css";
+import {NavLink} from "react-router-dom";
 
 const DescriptionDirections = () => {
     return (
@@ -9,10 +10,10 @@ const DescriptionDirections = () => {
                 Опиание направлений и специальностей
             </div>
             <div className={"description-directions-cards"}>
-                <DirectionsCard/>
-                <DirectionsCard typeInfo={"grid"}/>
-                <DirectionsCard typeInfo={"grid"}/>
-                <DirectionsCard/>
+               <NavLink to="/des1"><DirectionsCard/></NavLink> 
+               <NavLink to="/des2"><DirectionsCard typeInfo={"grid"}/></NavLink>
+               <NavLink to="/des3"><DirectionsCard typeInfo={"grid"}/></NavLink>
+               <NavLink to="/des4"><DirectionsCard/></NavLink>
             </div>
         </div>
     );
