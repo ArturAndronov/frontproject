@@ -59,6 +59,7 @@ const Checkbox = (props:any) => {
                     в договоре суммы денежных средств поступающий включается в приказ о зачислении.
                 </div>
                 <button className="questions-switch" >Задать вопрос</button>
+                
 
         </div>
 

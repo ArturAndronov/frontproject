@@ -73,6 +73,16 @@
 
     color: #2F80ED;
 }
+.info-people-name-firstName{
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+
+    letter-spacing: 0.05em;
+    color: #3E4554;
+}
 
 .info-people-name-secondName {
     font-family: 'Montserrat-Bold';
@@ -80,7 +90,7 @@
     font-weight: 800;
     font-size: 14px;
     line-height: 22px;
-
+    margin-left: 5px;
     letter-spacing: 0.05em;
     color: #3E4554;
 }
@@ -93,6 +103,9 @@
     line-height: 15px;
 
     color: #3E4554;
+}
+.name-container{
+    display: flex;
 }
 
 @media (max-width: 700px) {

@@ -1,0 +1,138 @@
+*,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tabs__links {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        margin-top: 26px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2px;
+        box-shadow: 0 2px 0px 0 #d3dbe6;
+    }
+
+    .tabs__links>a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 6px 10px;
+      text-align: center;
+      color: #000000;
+    }
+
+    .tabs__links>a:hover {
+      background-color: rgba(227, 242, 253, 0.3);
+    }
+    #content-1,#content-2,#content-3,#content-4,#content-5,#content-6{
+        background-color: #F1F9FF;
+        padding: 40px 165px 70px 165px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+
+        color: #3E4554;
+    }
+    .tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+    .tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+    .tabs>#content-3:target~.tabs__links>a[href="#content-3"],
+    .tabs>#content-4:target~.tabs__links>a[href="#content-4"],
+    .tabs>#content-5:target~.tabs__links>a[href="#content-5"],
+    .tabs>#content-6:target~.tabs__links>a[href="#content-6"] {
+      border-bottom: 3px solid #2F97ED;
+      cursor: default;
+
+    }
+
+    .tabs>div:not(.tabs__links) {
+      display: none;
+      order: 1;
+    }
+
+    .tabs>div:target {
+      display: block;
+    }
+
+    .teachers-title{
+        display: inline-block;
+        margin-top: 117px;
+    }
+
+
+    .teachers-wrapper {
+        cursor: pointer;
+    }
+    .teachers-wrapper-title {
+        display: inline-block;
+        padding: 117px 167px 26px 167px;
+    }
+    .teachers-wrapper-image {
+        position: relative;
+        height: 250px;
+        width: 244px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    .border-back svg path {
+        transition: 400ms;
+    }
+    .teachers-wrapper:hover .border-back svg path {
+        fill: #FCB346;
+    }
+    .teachers-wrapper:hover .info-people-lastName {
+        color: #FCB346;
+    }
+    .teachers-image {
+        z-index: 2;
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .teachers-image img {
+        height: 250px;
+    }
+    .teacher-burger-back, .teacher-border-back {
+        z-index: 1;
+    }
+    
+    .teacher-burger-back {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    
+    .teacher-border-back {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }

@@ -10,7 +10,7 @@ interface TeacherProps {
     lastName?: string, 
     secondName?: string, 
     img?: string, 
-    status?: string 
+    status?: string,
 }
 
 
@@ -19,37 +19,40 @@ const Teacher = (props: TeacherProps) => {
 
     const {
         firstName,
-        //lastName,
-        // secondName,
+        lastName,
+        secondName,
         // status,
-        // img
+        img,
         
     } = props
 
 
 
-    return (
-
-        <div>{firstName}</div>
-        // <div>{lastName}</div>
-
-    )
     // return (
-    //     <div className="department-history-wrapper-people">
-    //         <div className="department-history-wrapper-image-people">
-    //             <BurgerSVGsm className={'burger-back'} />
-    //             <BorderSVGsm className={'border-back'} />
-    //             <div className={'department-history-image-people'}>
-    //                 <img src={img} alt="images.tyagulska" />
-    //             </div>
-    //         </div>
-    //         <div className="department-history-wrapper-info-people">
-    //             <div className={'info-people-lastName'}>{lastName}</div>
-    //             <div className={'info-people-name-secondName'}>{secondName}</div>
-    //             <div className={'info-people-status'}>{status}</div>
-    //         </div>
-    //     </div>
+    //     <>
+    //         <div>{firstName}</div>
+    //         <div>{lastName}</div>
+    //     </>
     // )
+    return (
+        <div className="department-history-wrapper-people">
+            <div className="department-history-wrapper-image-people">
+                <BurgerSVGsm className={'burger-back'} />
+                <BorderSVGsm className={'border-back'} />
+                <div className={'department-history-image-people'}>
+                    <img src={img} />
+                </div>
+            </div>
+            <div className="department-history-wrapper-info-people">
+                <div className={'info-people-lastName'}>{lastName}</div>
+                <div className={'name-container'}>
+                    <div className={'info-people-name-firstName'}>{firstName}</div>
+                    <div className={'info-people-name-secondName'}>{secondName}</div>
+                </div>
+                {/* <div className={'info-people-status'}>{status}</div> */}
+            </div>
+        </div>
+    )
 }
 
 export default Teacher

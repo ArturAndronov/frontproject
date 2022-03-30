@@ -3,17 +3,8 @@ import "./index.css";
 import {  BrowserRouter,Route } from "react-router-dom";
 import {NavLink} from "react-router-dom";
 import DirectionsCard from "../../HomePage/components/DescriptionDirections/components/DirectionsCard";
-interface DescProps {
-    item: any
-}
-const Description = (props:DescProps) => {
-    const {
-        title,
-        info1,
-        info2,
-        infospan
-    } = props.item
 
+const Description = (props:any) => {
     return (
         <div>
         <div className={"description-destination-link"}>
@@ -22,11 +13,11 @@ const Description = (props:DescProps) => {
         </div>
         <div className={"destination"}>
                 <div className={"description-destination-info-wrapper"}>
-                    <div className={"description-destination-info-title"}>{title}</div>
+                    <div className={"description-destination-info-title"}>{props.title}</div>
                     <div className={"description-destination-info"}>
-                        {info1}<br/>
-                        <span>{infospan}</span><br/>
-                        {info2}
+                        {props.info1}<br/>
+                        <span>{props.infospan}</span><br/>
+                        {props.info2}
                     </div>
                     <div className={"description-destination"}>
                     <span>Квалификация:</span> магистр.<br/>

@@ -18,11 +18,11 @@ const Footer = () => {
             </div>
             <div className={'footer-right-path'}>
                 <div className={'footer-soc-seti-wrapper'}>
-                    <TelegramSVG/>
-                    <VkontakteSVG/>
-                    <FacebookSVG/>
-                    <ViberSVG/>
-                    <TweeterSVG/>
+                    <TelegramSVG />
+                    <VkontakteSVG />
+                    <FacebookSVG />
+                    <ViberSVG />
+                    <TweeterSVG />
                 </div>
                 <div className={'footer-right-path-info'}>г. Рыбница ул. Гагарина, 12</div>
                 <div className={'footer-right-path-info'}>0 (555) 2-39-12</div>

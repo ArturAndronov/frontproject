@@ -111,9 +111,9 @@ const ListTeachers = () => {
     const [users,setUsers]:any[] = useState([])
 
     useEffect (() => {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users`)
+        axios.get(`http://127.0.0.1:8000/api/teachers`)
           .then(res => {
-            const persons = res.data.items;
+            const persons = res.data;
             console.log (persons)
             setUsers(persons);
           })
@@ -128,9 +128,11 @@ const ListTeachers = () => {
             <div className={"list-teachers-grid"}>
                 {users.map((teacher:any, index:number) => (
                     <Teacher
-                        key={`${index}-${teacher.name}`}
-                        firstName={teacher.name}
-                        // lastName={teacher.lastName}
+                        key={`${index}-${teacher.user.name}`}
+                        firstName={teacher.user.name}
+                        lastName={teacher.user.surname}
+                        secondName={teacher.user.patronymic}
+                        img={teacher.avatar_path}
                     />
                 ))}
             </div>

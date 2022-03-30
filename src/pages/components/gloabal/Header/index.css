@@ -57,7 +57,7 @@
     border-bottom: 3px solid #65a7ea;
 }
 
-.header-login {
+.header-login a{
     font-family: 'Montserrat-Bold', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -70,7 +70,7 @@
     border-bottom: 3px solid transparent;
 }
 
-.header-login:hover {
+.header-login a:hover {
     color: rgb(146, 171, 219);
 }
 

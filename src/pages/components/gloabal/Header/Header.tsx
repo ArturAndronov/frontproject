@@ -35,7 +35,7 @@ const Header = () => {
                         {/* <button className="switch" onClick={() => {ld()}}>
                         Выкл/вкл тему по времени</button> */}
                     </div>
-                    <div className={'header-login'}>Вход</div>
+                    <div className={'header-login'}><a href="http://127.0.0.1:8000/">Вход</a></div>
                 </div>
             </div>
         </div>

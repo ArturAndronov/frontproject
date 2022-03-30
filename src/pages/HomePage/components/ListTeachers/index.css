@@ -18,11 +18,11 @@
 
 .list-teachers-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     align-items: flex-start;
     justify-content: center;
-    grid-gap: 35px 60px;
+    grid-gap: 65px 30px;
     padding: 0 80px;
 }
 
