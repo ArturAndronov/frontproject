@@ -27,6 +27,8 @@
     }
 
     .tabs__links>a {
+        margin-right: 40px;
+        margin-left: 40px;
       display: inline-block;
       text-decoration: none;
       padding: 6px 10px;
@@ -80,8 +82,8 @@
         cursor: pointer;
     }
     .teachers-wrapper-title {
-        display: inline-block;
-        padding: 117px 167px 26px 167px;
+        display: flex;
+        padding: 117px 100px 26px 167px;
     }
     .teachers-wrapper-image {
         position: relative;
@@ -135,4 +137,155 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .teachers-image-people {
+        z-index: 2;
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .teachers-image-people img {
+        height: 250px;
+    }
+    .teachers-wrapper-info-people {
+        display: flex;
+        margin-left: 22px;
+        margin-top: 45px;
+        flex-flow: column wrap;
+        gap: 3px;
+    }
+    .teachers-info-people-lastName {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.05em;
+
+        color: #2F80ED;
+    }
+    .teachers-info-people-name-firstName{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+
+        letter-spacing: 0.05em;
+        color: #3E4554;
+    }
+    
+    .teachers-info-people-name-secondName {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+
+        letter-spacing: 0.05em;
+        color: #3E4554;
+        margin-left: 5px;
+    }
+    
+    .teachers-info-people-status {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    
+        color: #3E4554;
+    }
+    .teachers-name-container{
+        display: flex;
+    }
+    .teachers-project-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-left: 695px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+
+        text-align: right;
+        letter-spacing: 0.02em;
+
+        color: #3E4554;
+    }
+    .teachers-project-container span{
+        margin-left: 10px;
+        font-weight: 300;
+    }
+    .teachers-more-info div{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        /* identical to box height */
+
+        letter-spacing: 0.05em;
+
+        color: #959CB1;
+
+        margin-top: 20px;
+        border-bottom: 3px solid #D3DBE6;
+    }
+    .teachers-more-info{
+        display: inline-block;
+        width: 540px;
+    }
+    .teachers-more-info span{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        text-align: right;
+        letter-spacing: 0.02em;
+
+        color: #3E4554;
+
+    }
+    .teachers-interests{
+        display: inline-block;
+        margin-left: 60px;
+
+    }
+    .teacher-interests-more{
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.05em;
+
+        color: rgba(62, 69, 84, 0.18);
+
+        width: 538px;
+        height: 357px;
+    }
+    .teacher-interests-scientific{
+        margin-bottom: 15px;
+        
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.05em;
+
+        color: #2F80ED;
     }

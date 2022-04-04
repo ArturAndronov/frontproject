@@ -10,6 +10,7 @@ import AllNews from "../../../News";
 import DescriptionsRoute from "../../../DescriptionsRoute";
 import Schedule from "../../../Schedule";
 import Questions from "../../../Questions";
+import News2 from "../../../News2";
 
 const Routers = () => {
 
@@ -21,6 +22,7 @@ const Routers = () => {
                 <Route path="/news"><AllNews/></Route>
                 <Route path="/teacher"><Teachers/></Route>
                 <Route path="/des1"><DescriptionsRoute/></Route>
+                <Route path="/news2"><News2/></Route>
                 <Route path="/"><HomePage/></Route>
             </Switch>
         </Router>

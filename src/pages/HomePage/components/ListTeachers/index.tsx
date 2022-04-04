@@ -118,7 +118,15 @@ const ListTeachers = () => {
             setUsers(persons);
           })
       },[])
-
+      const teacher = users.map((teacher:any, index:number) => 
+      <Teacher
+          key={`${index}-${teacher.user.name}`}
+          firstName={teacher.user.name}
+          lastName={teacher.user.surname}
+          secondName={teacher.user.patronymic}
+          img={teacher.avatar_path}
+      />
+  );
     
     return (
         <div className={"list-teachers"} >
@@ -126,15 +134,7 @@ const ListTeachers = () => {
                 Список преподавателей
             </div>
             <div className={"list-teachers-grid"}>
-                {users.map((teacher:any, index:number) => (
-                    <Teacher
-                        key={`${index}-${teacher.user.name}`}
-                        firstName={teacher.user.name}
-                        lastName={teacher.user.surname}
-                        secondName={teacher.user.patronymic}
-                        img={teacher.avatar_path}
-                    />
-                ))}
+                {teacher}
             </div>
         </div>
     );

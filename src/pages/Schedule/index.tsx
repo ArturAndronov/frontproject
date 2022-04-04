@@ -18,6 +18,44 @@ const Schedule = () => {
                        link.setAttribute('download','download');
                        link.click();
                         }}>Download</button>
+            <table>
+            <tr>
+            <th ></th><th ></th><th >РФ21ДР62ПИ1</th><th ></th>
+            </tr>
+            <tr>
+            <th id="test">Дни недели:</th><th id="test"># пары</th><th id="test">Дисциплина / преп.</th><th id="test"># ауд.</th>
+            </tr>
+            <tr>
+                <th >Понедельник</th><th >1</th><th >1</th><th >1</th>
+            </tr>
+            <tr>
+                <th >Вторник</th><th >2</th><th >2</th><th >2</th>
+            </tr>
+            <tr>
+                <th >Среда</th><th >3</th><th >3</th><th >3</th>
+            </tr>
+            <tr>
+                <th >Четверг</th><th >4</th><th >4</th><th >4</th>
+            </tr>
+            <tr>
+                <th >Пятница</th><th >5</th><th >5</th><th >5</th>
+            </tr>
+            {/* <tr>
+                <th>{day}</th>
+            </tr>
+            <tr>
+                <th>{day}</th>
+            </tr>
+            <tr>
+                <th>{day}</th>
+            </tr>
+            <tr>
+                <th>{day}</th>
+            </tr>
+            <tr>
+                <th>{day.name}</th>
+            </tr> */}
+            </table>
         </div>
         
     );
