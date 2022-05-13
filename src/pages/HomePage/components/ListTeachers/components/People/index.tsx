@@ -1,41 +1,32 @@
-
-import images from "../../../../../../assets/image";
+import { withRouter } from 'react-router-dom'
 import './index.css'
 import BurgerSVGsm from "../../../../../components/gloabal/UI/SVGComponents/BurgerSVGsm";
 import BorderSVGsm from "../../../../../components/gloabal/UI/SVGComponents/BorderSVGsm";
 
 
-interface TeacherProps { 
-    firstName: string, 
-    lastName?: string, 
-    secondName?: string, 
-    img?: string, 
+interface TeacherProps {
+    id: string,
+    firstName: string,
+    lastName?: string,
+    secondName?: string,
+    img?: string,
     status?: string,
 }
 
 
 const Teacher = (props: TeacherProps) => {
 
-
     const {
+        id = '123',
         firstName,
         lastName,
         secondName,
-        // status,
         img,
-        
+        history
     } = props
 
-
-
-    // return (
-    //     <>
-    //         <div>{firstName}</div>
-    //         <div>{lastName}</div>
-    //     </>
-    // )
     return (
-        <div className="department-history-wrapper-people">
+        <div className="department-history-wrapper-people" onClick={() => history.push('/teacher',{id: id})}>
             <div className="department-history-wrapper-image-people">
                 <BurgerSVGsm className={'burger-back'} />
                 <BorderSVGsm className={'border-back'} />
@@ -55,4 +46,4 @@ const Teacher = (props: TeacherProps) => {
     )
 }
 
-export default Teacher
+export default withRouter(Teacher);

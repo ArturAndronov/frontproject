@@ -1,66 +1,91 @@
 import './index.css'
-import { useEffect } from "react"
-import React, { useState, Suspense } from "react";
+import {useEffect} from "react"
+import React, {useState} from "react";
 import axios from "axios"
 import TeacherContent from './components/TeacherContent';
-import {Dots} from 'react-preloaders';
+import {Oval} from "react-loader-spinner";
+import {withRouter} from "react-router-dom";
 
-
-
-
-
-const Teachers = () => {
-  const [users, setUsers]: any[] = useState([])
-
-  //  useEffect(async (): Promise<T> => {
-  //   await axios.get( `http://127.0.0.1:8000/api/teachers`)
-  //     .then(res => {
-  //       const persons = res.data;
-  //       setUsers(persons);
-  //     })
-  // }, [setUsers])
-
-  // let [product, setproduct] = useState([]);
-
-async function fetchTeachers() {
-  await axios.get( `http://127.0.0.1:8000/api/teachers`)
-  .then(res => {
-    const persons = res.data;
-    setUsers(persons);
-  })
+const getTeachers = async () => {
+    return await axios.get(`http://127.0.0.1:8000/api/teachers`)
 }
 
-useEffect(() => {
-fetchTeachers();
-}, [setUsers]);
+const TeacherPage = ({history}) => {
+    console.log(history.params.id)
+    const [users, setUsers]: any[] = useState([])
+    const [isLoading, setIsLoading] = useState<boolean>(true)
 
-  const teachercontent = users.map((teacher: any, index: number) =>
-    <TeacherContent
-      firstName={teacher.user.name}
-      lastName={teacher.user.surname}
-      secondName={teacher.user.patronymic}
-      img={teacher.avatar_path}
-      publications_count={teacher.publications_count}
-      projects_count={teacher.projects_count}
-      conferences_count={teacher.conferences_count}
-      diploma_projects_count={teacher.diploma_projects_count}
-      regalias={teacher.regalias}
-      education_level={teacher.education_level.name}
-      professional_interests={teacher.professional_interests}
-      dissertation_proof={teacher.dissertation_proof}
-    />
-  );
-  return (
-    <div className={"teacher-wrapper"} >
-        <div className={"teacher-grid"}>
-      
-          {teachercontent[0]}
-        
+
+    useEffect(() => {
+        setIsLoading(true)
+        getTeachers().then(res => {
+            const persons = res.data;
+            setUsers(persons);
+            setIsLoading(false)
+        })
+    }, [])
+
+    const teachercontent = users.find((teacher: any) => teacher.id === history.params.id);
+
+    if (teachercontent === undefined) {
+        return (
+            <div style={{
+                position: "fixed",
+                inset: 0,
+                display: 'flex',
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 1000,
+                background: 'white'
+            }}>
+                Нет такого учителя
+            </div>
+        )
+    }
+
+    return (
+        <div className={"teacher-wrapper"}>
+            <div className={"teacher-grid"}>
+                {isLoading && (
+                    <div style={{
+                        position: "fixed",
+                        inset: 0,
+                        display: 'flex',
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1000,
+                        background: 'white'
+                    }}>
+                        <Oval
+                            ariaLabel="loading-indicator"
+                            height={100}
+                            width={100}
+                            strokeWidth={5}
+                            strokeWidthSecondary={1}
+                            color="blue"
+                            secondaryColor="white"
+                        />
+                    </div>
+                )}
+                {!isLoading && (
+                    <TeacherContent
+                        firstName={teachercontent.user.name}
+                        lastName={teachercontent.user.surname}
+                        secondName={teachercontent.user.patronymic}
+                        img={teachercontent.avatar_path}
+                        publications_count={teachercontent.publications_count}
+                        projects_count={teachercontent.projects_count}
+                        conferences_count={teachercontent.conferences_count}
+                        diploma_projects_count={teachercontent.diploma_projects_count}
+                        regalias={teachercontent.regalias}
+                        education_level={teachercontent.education_level.name}
+                        professional_interests={teachercontent.professional_interests}
+                        dissertation_proof={teachercontent.dissertation_proof}
+                    />
+                )}
+            </div>
         </div>
-      {/* <TeacherContent /> */}
-    </div>
-
-  );
+    );
 };
 
-export default Teachers;
+export default withRouter(TeacherPage);;

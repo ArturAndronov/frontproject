@@ -106,28 +106,37 @@ let teachers = [
     },
 ];
 
+
+const getTeachers = async () => {
+    return await axios.get(`http://127.0.0.1:8000/api/teachers`)
+}
+
+
 const ListTeachers = () => {
 
-    const [users,setUsers]:any[] = useState([])
+    const [users, setUsers]: any[] = useState([])
+    const [isLoading, setIsLoading] = useState<boolean>(true)
 
-    useEffect (() => {
-        axios.get(`http://127.0.0.1:8000/api/teachers`)
-          .then(res => {
+
+    useEffect(() => {
+        setIsLoading(true)
+        getTeachers().then(res => {
             const persons = res.data;
-            console.log (persons)
             setUsers(persons);
-          })
-      },[])
-      const teacher = users.map((teacher:any, index:number) => 
-      <Teacher
+            setIsLoading(false)
+        })
+    }, [])
+
+      const teacher = users.map((teacher:any, index:number) => (<Teacher
           key={`${index}-${teacher.user.name}`}
           firstName={teacher.user.name}
           lastName={teacher.user.surname}
           secondName={teacher.user.patronymic}
           img={teacher.avatar_path}
-      />
+      />)
+
   );
-    
+
     return (
         <div className={"list-teachers"} >
             <div className={"list-teachers-title"} id="prep">
