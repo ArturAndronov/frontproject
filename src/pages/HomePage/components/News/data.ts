@@ -24,11 +24,7 @@ export const news: FieldsCollectionNews = {
                 description: "В связи с продлением карантинных мероприятий прием заявлений ...",
                 data: new Date(),
             },
-            {
-                title: "4 курс работяги",
-                description: "В связи с продлением карантинных мероприятий прием заявлений ...",
-                data: new Date(),
-            },
+           
         ],
     },
     science: {

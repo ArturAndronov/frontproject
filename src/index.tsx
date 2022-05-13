@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Theme from './pages/components/Layout';
 import ThemeFont from './pages/components/LayoutFont';
+import Test from './pages/Teachers/components/TeacherContent/test';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
         <App />
       </ThemeFont>
     </Theme>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

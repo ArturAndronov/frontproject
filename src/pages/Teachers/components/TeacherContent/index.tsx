@@ -16,8 +16,8 @@ interface TeacherMoreProps {
   conferences_count?: string,
   diploma_projects_count?: string,
   education_level?: string,
-  professional_interests?:string,
-  dissertation_proof?:string,
+  professional_interests?: string,
+  dissertation_proof?: string,
   regalias?: Array<any>,
 }
 
@@ -41,22 +41,37 @@ const TeacherContent = (props: TeacherMoreProps) => {
 
   const [users, setUsers]: any[] = useState([])
 
+   function fetchTeacherContent() {
+    return axios.get( `http://127.0.0.1:8000/api/teachers`)
+    .then(res => {
+      const persons = res.data;
+      setUsers(persons);
+    })
+  }
+  
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/teachers`)
-      .then(res => {
-        const persons = res.data;
-        console.log(persons)
-        setUsers(persons);
-      })
-  }, [])
+  fetchTeacherContent();
+  }, [setUsers]);
+  
 
   //   const regal = props.regalias.map((regalias:any) =>
   //   <li>{regalias.name}</li>
   // );
 
+
   return (
 
     <div>
+      {/* <div className="preloader">
+        <div className="preloader__row">
+          <div className="preloader__item"></div>
+          <div className="preloader__item"></div>
+        </div>
+      </div> */}
+
+
+
+
       <div className="teachers-wrapper">
         <div className='teachers-wrapper-title'>
           <div className="teachers-wrapper-image">
@@ -109,7 +124,7 @@ const TeacherContent = (props: TeacherMoreProps) => {
             </div>
           </div>
 
-          <div id="content-2">
+          <div className='second-content' id="content-2">
             Содержимое 2...
           </div>
           <div id="content-3">
@@ -136,6 +151,7 @@ const TeacherContent = (props: TeacherMoreProps) => {
         </div>
       </div>
     </div>
+
   );
 };
 

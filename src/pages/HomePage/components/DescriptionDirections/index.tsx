@@ -11,9 +11,9 @@ const DescriptionDirections = () => {
             </div>
             <div className={"description-directions-cards"}>
                <NavLink to="/des1"><DirectionsCard/></NavLink> 
-               <NavLink to="/des2"><DirectionsCard typeInfo={"grid"}/></NavLink>
-               <NavLink to="/des3"><DirectionsCard typeInfo={"grid"}/></NavLink>
-               <NavLink to="/des4"><DirectionsCard/></NavLink>
+               <NavLink to="/des1"><DirectionsCard typeInfo={"grid"}/></NavLink>
+               <NavLink to="/des1"><DirectionsCard typeInfo={"grid"}/></NavLink>
+               <NavLink to="/des1"><DirectionsCard/></NavLink>
             </div>
         </div>
     );

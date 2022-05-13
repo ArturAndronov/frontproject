@@ -85,6 +85,21 @@
     padding-top: 250px;
 }
 
+.click-for-video {
+    width: 640px;
+    height: 480px;
+    cursor: pointer;
+  }
+  
+  .youtube {
+    width: 640px;
+    height: 480px;
+  }
+  
+  div.youtube {
+    display: none;
+  }
+  
 @media (max-width: 1300px) {
     .first-block-content-wrapper {
         max-width: 535px;

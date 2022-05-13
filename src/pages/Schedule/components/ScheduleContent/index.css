@@ -1,0 +1,48 @@
+.schedule-link a{
+    text-decoration: none;
+    margin-right: 15px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #3E4554;
+
+}
+.schedule-link a span{
+    margin-left: 15px;
+}
+.schedule-link{
+    margin-bottom: 43px;
+}
+.schedule{
+    padding: 140px 165px
+}
+table{
+    margin-top: 50px;
+}
+table, th, td {
+    border:1px solid black;
+  }
+th {
+    padding: 4px 10px;
+}
+#test{
+    color: #959CB1;
+}
+@media (max-width: 1100px) {
+    .schedule {
+        padding: 60px 65px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .schedule {
+        padding: 60px 15px !important;
+    }
+}
