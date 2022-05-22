@@ -1,11 +1,11 @@
-import { withRouter } from 'react-router-dom'
+import { useHistory, withRouter } from 'react-router-dom'
 import './index.css'
 import BurgerSVGsm from "../../../../../components/gloabal/UI/SVGComponents/BurgerSVGsm";
 import BorderSVGsm from "../../../../../components/gloabal/UI/SVGComponents/BorderSVGsm";
 
 
 interface TeacherProps {
-    id: string,
+    id?: any,
     firstName: string,
     lastName?: string,
     secondName?: string,
@@ -15,18 +15,17 @@ interface TeacherProps {
 
 
 const Teacher = (props: TeacherProps) => {
-
+    const history = useHistory();
     const {
-        id = '123',
+        id,
         firstName,
         lastName,
         secondName,
-        img,
-        history
+        img
     } = props
 
     return (
-        <div className="department-history-wrapper-people" onClick={() => history.push('/teacher',{id: id})}>
+        <div className="department-history-wrapper-people" onClick={() => history.push(`/teacher/${id}`)}>
             <div className="department-history-wrapper-image-people">
                 <BurgerSVGsm className={'burger-back'} />
                 <BorderSVGsm className={'border-back'} />
@@ -46,4 +45,4 @@ const Teacher = (props: TeacherProps) => {
     )
 }
 
-export default withRouter(Teacher);
+export default Teacher;

@@ -4,17 +4,20 @@ import React, {useState} from "react";
 import axios from "axios"
 import TeacherContent from './components/TeacherContent';
 import {Oval} from "react-loader-spinner";
-import {withRouter} from "react-router-dom";
+import {withRouter, useParams} from "react-router-dom";
+import { parseJsonText } from 'typescript';
 
 const getTeachers = async () => {
     return await axios.get(`http://127.0.0.1:8000/api/teachers`)
 }
 
-const TeacherPage = ({history}) => {
-    console.log(history.params.id)
+const TeacherPage = (id: { params: { id: string; }; }) => {
+    // console.log(useParams());
+    // console.log(history.params.id)
+    const idpar = Number.parseInt(id.params.id);
+    //const {id} = useParams();
     const [users, setUsers]: any[] = useState([])
     const [isLoading, setIsLoading] = useState<boolean>(true)
-
 
     useEffect(() => {
         setIsLoading(true)
@@ -25,24 +28,25 @@ const TeacherPage = ({history}) => {
         })
     }, [])
 
-    const teachercontent = users.find((teacher: any) => teacher.id === history.params.id);
-
-    if (teachercontent === undefined) {
-        return (
-            <div style={{
-                position: "fixed",
-                inset: 0,
-                display: 'flex',
-                alignItems: "center",
-                justifyContent: "center",
-                zIndex: 1000,
-                background: 'white'
-            }}>
-                Нет такого учителя
-            </div>
-        )
-    }
-
+    //const teachercontent = users.find((teacher: any) => Number.parseInt(teacher.id) == idpar);
+    const teachercontent = users[idpar]
+    // if (teachercontent === undefined) {
+    //     return (
+    //         <div style={{
+    //             position: "fixed",
+    //             inset: 0,
+    //             display: 'flex',
+    //             alignItems: "center",
+    //             justifyContent: "center",
+    //             zIndex: 1000,
+    //             background: 'white'
+    //         }}>
+    //             Нет такого учителя
+    //         </div>
+    //     )
+    // }
+    console.log(users)
+    console.log(idpar)
     return (
         <div className={"teacher-wrapper"}>
             <div className={"teacher-grid"}>
@@ -88,4 +92,4 @@ const TeacherPage = ({history}) => {
     );
 };
 
-export default withRouter(TeacherPage);;
+export default TeacherPage;;

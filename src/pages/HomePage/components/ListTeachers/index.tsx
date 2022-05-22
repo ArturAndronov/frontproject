@@ -128,7 +128,8 @@ const ListTeachers = () => {
     }, [])
 
       const teacher = users.map((teacher:any, index:number) => (<Teacher
-          key={`${index}-${teacher.user.name}`}
+          key={`${index}-${teacher.user.firstName}`}
+          id={teacher.user.id}
           firstName={teacher.user.name}
           lastName={teacher.user.surname}
           secondName={teacher.user.patronymic}

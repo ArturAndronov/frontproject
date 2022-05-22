@@ -5,7 +5,7 @@ import {
     Route,
 } from "react-router-dom";
 import HomePage from "../../../HomePage";
-import Teachers from "../../../Teachers";
+import TeacherPage from "../../../Teachers";
 import AllNews from "../../../News";
 import DescriptionsRoute from "../../../DescriptionsRoute";
 import Schedule from "../../../Schedule/components/ScheduleContent";
@@ -19,7 +19,10 @@ const Routers = () => {
                 <Route path="/questions"><Questions/></Route>
                 <Route path="/schedule"><Schedule/></Route>
                 <Route path="/news"><AllNews/></Route>
-                <Route path="/teacher"><Teachers/></Route>
+                {/* <Route path="/teacher"><TeacherPage/></Route> */}
+                <Route path="/teacher/:id"><TeacherPage params={{
+                    id: ""
+                }}/></Route>
                 <Route path="/des1"><DescriptionsRoute/></Route>
                 <Route path="/"><HomePage/></Route>
             </Switch>

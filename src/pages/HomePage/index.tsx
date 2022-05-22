@@ -6,6 +6,7 @@ import ListTeachers from "./components/ListTeachers";
 import News from "./components/News";
 import "./index.css";
 import AnimateOpacity from "../components/gloabal/UI/AnimateOpacity";
+import {Route} from "react-router-dom";
 
 const HomePage = () => {
     return (
@@ -21,6 +22,7 @@ const HomePage = () => {
             {/*</AnimateOpacity>*/}
             {/*<AnimateOpacity count={500}>*/}
                 <ListTeachers/>
+                
             {/*</AnimateOpacity>*/}
             {/*<AnimateOpacity count={500}>*/}
                 <News/>
