@@ -53,7 +53,11 @@ const TeacherContent = (props: TeacherMoreProps) => {
   fetchTeacherContent();
   }, [setUsers]);
   
+  const [toggleState, setToggleState] = useState(1);
 
+  const toggleTab = (index:any) => {
+    setToggleState(index);
+  };
   //   const regal = props.regalias.map((regalias:any) =>
   //   <li>{regalias.name}</li>
   // );
@@ -98,57 +102,127 @@ const TeacherContent = (props: TeacherMoreProps) => {
 
         </div>
 
-        <div className="tabs">
+        <div className="bloc-tabs">
+        <button
+          className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(1)}
+        >
+          О преподавателе
+        </button>
+        <button
+          className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(2)}
+        >
+          Консультации
+        </button>
+        <button
+          className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(3)}
+        >
+          Расписание
+        </button>
+        <button
+          className={toggleState === 4 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(4)}
+        >
+          Темы ВКР
+        </button>
+        <button
+          className={toggleState === 5 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(5)}
+        >
+          Публикации
+        </button>
+        <button
+          className={toggleState === 6 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(6)}
+        >
+          Наукометрия
+        </button>
+      </div>
 
-          <div className='first-content' id="content-1">
-            <div className='teachers-more-info'>
-              <div>Ученая степень и звание<span></span></div>
-              <div>Вид образования<span>{education_level}</span></div>
-              <div>Образование<span></span></div>
-              <div>Подтверждающий документ<span></span></div>
-              <div>Защита диссертации<span>{dissertation_proof}</span></div>
-              <div>Преподаваемые дисциплины<span></span></div>
+      <div className="content-tabs">
+        <div
+          className={toggleState === 1 ? "content  active-content" : "content"}
+        >
+          <div className='teachers-more-info'>
+              <div>Ученая степень и звание:<span>{regalias}</span></div>
+              <div>Вид образования:<span>{education_level}</span></div>
+              <div>Образование:<span></span></div>
+              <div>Подтверждающий документ:<span></span></div>
+              <div>Защита диссертации:<span>{dissertation_proof}</span></div>
+              <div>Преподаваемые дисциплины:<span></span></div>
             </div>
             <div className='teachers-interests'>
               <div className='teacher-interests-scientific'>Профессиональные и научные интересы:</div>
-              <div className='teacher-interests-more'>Разнообразный и богатый опыт укрепление и развитие структуры
-                требуют от нас анализа модели развития. Повседневная практика показывает, что постоянный количественный рост
-                и сфера нашей активности позволяет выполнять важные задания по разработке позиций, занимаемых участниками в
-                отношении поставленных задач. Не следует, однако забывать, что начало повседневной работы по формированию позиции
-                требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка,
-                а также реализация намеченных плановых заданий позволяет оценить значение дальнейших направлений развития.
-                Таким образом сложившаяся структура организации в значительной степени обуславливает создание новых предложений.
-                Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности требуют определения и уточнения новых предложений.
-              </div>
-              {/* <div className='teacher-interests-scientific'>{professional_interests}</div> */}
+              <div className='teacher-interests-more'>{professional_interests}</div>
             </div>
-          </div>
-
-          <div className='second-content' id="content-2">
-            Содержимое 2...
-          </div>
-          <div id="content-3">
-            Содержимое 3...
-          </div>
-          <div id="content-4">
-            Содержимое 4...
-          </div>
-          <div id="content-5">
-            Содержимое 5...
-          </div>
-          <div id="content-6">
-            Содержимое 6...
-          </div>
-
-          <div className="tabs__links">
-            <a href="#content-1">О преподавателе</a>
-            <a href="#content-2">Консультации </a>
-            <a href="#content-3">Расписание</a>
-            <a href="#content-4">Темы ВКР</a>
-            <a href="#content-5">Публикации</a>
-            <a href="#content-6">Наукометрия</a>
-          </div>
         </div>
+
+        <div
+          className={toggleState === 2 ? "content  active-content" : "content"}
+        >
+          <h2>Content 2</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            voluptatum qui adipisci.
+          </p>
+        </div>
+
+        <div
+          className={toggleState === 3 ? "content  active-content" : "content"}
+        >
+          <h2>Content 3</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
+            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
+            Accusamus in quia odit aspernatur provident et ad vel distinctio
+            recusandae totam quidem repudiandae omnis veritatis nostrum
+            laboriosam architecto optio rem, dignissimos voluptatum beatae
+            aperiam voluptatem atque. Beatae rerum dolores sunt.
+          </p>
+        </div>
+        
+        <div
+          className={toggleState === 4 ? "content  active-content" : "content"}
+        >
+          <h2>Content 4</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
+            vel voluptatum?
+          </p>
+        </div>
+
+        <div
+          className={toggleState === 5 ? "content  active-content" : "content"}
+        >
+          <h2>Content 5</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            voluptatum qui adipisci.
+          </p>
+        </div>
+
+        <div
+          className={toggleState === 6 ? "content  active-content" : "content"}
+        >
+          <h2>Content 6</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
+            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
+            Accusamus in quia odit aspernatur provident et ad vel distinctio
+            recusandae totam quidem repudiandae omnis veritatis nostrum
+            laboriosam architecto optio rem, dignissimos voluptatum beatae
+            aperiam voluptatem atque. Beatae rerum dolores sunt.
+          </p>
+        </div>
+      </div>
       </div>
     </div>
 

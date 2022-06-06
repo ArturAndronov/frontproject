@@ -23,6 +23,9 @@
 .schedule{
     padding: 140px 165px
 }
+.wrapper-table{
+    padding: 0px 0px 0px 500px;
+}
 table{
     margin-top: 50px;
 }

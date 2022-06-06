@@ -20,25 +20,24 @@ const Description = (props:any) => {
                         {props.info2}
                     </div>
                     <div className={"description-destination"}>
-                    <span>Квалификация:</span> магистр.<br/>
-                    <span>Срок обучения:</span> – очная 2 года; – заочная 2 года 3 месяца.<br/>
-                    <span>Форма обучения:</span> очная, заочная.<br/>
+                    <span>Квалификация:</span> {props.qualif}.<br/>
+                    <span>Срок обучения:</span> {props.term}.<br/>
+                    <span>Форма обучения:</span> {props.form}.<br/>
                     <span>Язык обучения:</span> русский<br/>
                     <span>Перечень и форма вступительных испытаний:</span><br/>
-                    Педагогическая информатика (экзамен), иностранный язык (тестирование в Рыбницком филиале ПГУ им.Т.Г. Шевченко).<br/>
+                    {props.introductory}<br/>
                     <br/>
-                    Обучение по данному направлению осуществляется на договорной основе.<br/>
-                    Для успешного овладения навыками профессии необходимо: хорошее знание математики, родного языка, информатики, умения и навыки по практическому использованию информационных технологий, умение находить различные решения практических задач с помощью ИКТ.<br/>
-                    Требования, предъявляемые профессией: целеустремленность, усидчивость, умение работать с учебной литературой, математические способности.<br/>
-                    Сфера применения полученных знаний по профилю: образование, социальная сфера, культура.<br/>
+                    {props.introductoryinf}
                     </div>
                 </div>
                 <div className="description-destination-card-wrapper">     
                     <div className={"description-destination-cards"}>
-                    <NavLink to="/des1"><DirectionsCard/></NavLink> 
-                    <NavLink to="/des2"><DirectionsCard typeInfo={"grid"}/></NavLink>
-                    <NavLink to="/des3"><DirectionsCard typeInfo={"grid"}/></NavLink>
-                    <NavLink to="/des4"><DirectionsCard/></NavLink>
+                    <NavLink to="/des1"><DirectionsCard term="2 года 4 месяца (заочно)" qualification="2.09.04.04 - МАГИСТРАТУРА" direction="Программная инженерия" profile="Разработка программно-информационных
+систем"/></NavLink> 
+               <NavLink to="/des2"><DirectionsCard typeInfo={"grid"} qualification="2.09.03.04 - БАКАЛАВРИАТ" direction="Программная инженерия" profile="Разработка программно-информационных
+систем"/></NavLink>
+               <NavLink to="/des3"><DirectionsCard typeInfo={"grid"} qualification="6.44.03.01 - БАКАЛАВРИАТ" direction="Педагогическое образование" profile="Информационные технологии в образовании"/></NavLink>
+               <NavLink to="/des4"><DirectionsCard term="2 года 3 месяца (заочно) / 2 года (очно)" qualification="6.44.04.01 - МАГИСТРАТУРА" direction="Педагогическое образование" profile="Информационные технологии в образовании"/></NavLink>
                     </div>
             </div>
             </div>

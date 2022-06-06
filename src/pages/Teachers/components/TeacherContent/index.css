@@ -5,73 +5,6 @@
     }
 
 
-    .tabs {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .tabs__links {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        letter-spacing: 0.05em;
-        color: #000000;
-        margin-top: 26px;
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2px;
-        box-shadow: 0 2px 0px 0 #d3dbe6;
-    }
-
-    .tabs__links>a {
-        margin-right: 40px;
-        margin-left: 40px;
-      display: inline-block;
-      text-decoration: none;
-      padding: 6px 10px;
-      text-align: center;
-      color: #000000;
-    }
-
-    .tabs__links>a:hover {
-      background-color: rgba(227, 242, 253, 0.3);
-    }
-    #content-1,#content-2,#content-3,#content-4,#content-5,#content-6{
-        background-color: #F1F9FF;
-        padding: 40px 165px 70px 165px;
-
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        letter-spacing: 0.02em;
-
-        color: #3E4554;
-    }
-    .tabs>#content-1:target~.tabs__links>a[href="#content-1"],
-    .tabs>#content-2:target~.tabs__links>a[href="#content-2"],
-    .tabs>#content-3:target~.tabs__links>a[href="#content-3"],
-    .tabs>#content-4:target~.tabs__links>a[href="#content-4"],
-    .tabs>#content-5:target~.tabs__links>a[href="#content-5"],
-    .tabs>#content-6:target~.tabs__links>a[href="#content-6"] {
-      border-bottom: 3px solid #2F97ED;
-      cursor: default;
-
-    }
-
-    .tabs>div:not(.tabs__links) {
-      display: none;
-      order: 1;
-    }
-
-    .tabs>div:target {
-      display: block;
-    }
-
     .teachers-title{
         display: inline-block;
         margin-top: 117px;
@@ -250,8 +183,8 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
-        /* identical to box height */
-
+        /* float:right; */
+        margin-left: 10px;
         text-align: right;
         letter-spacing: 0.02em;
 
@@ -361,3 +294,108 @@
       .loaded .preloader {
         display: none;
       }
+
+  
+
+  
+  
+  button {
+    border: none;
+    
+  }
+  .content-tabs {
+    flex-grow : 1;
+    background-color: #F1F9FF;
+        padding: 40px 165px 70px 165px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+
+        color: #3E4554;
+  }
+  .content {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .content h2 {
+    padding: 0px 0 5px 0px;
+  }
+  .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  }
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .active-content {
+    display: block;
+    background-color: #F1F9FF;
+    padding: 0px 165px;
+
+  }
+  .bloc-tabs {
+    display: flex;
+    padding:25px 165px 0px 165px
+  }
+  .tabs {
+  
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    background: white;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: rgb(88, 147, 241);
+  }
+  
+  .bloc-tabs button{
+    margin-top: 20px;
+    border-bottom: 3px solid #D3DBE6;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-top: 26px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    box-shadow: 0 2px 0px 0 #d3dbe6; 
+  }
+  

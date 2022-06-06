@@ -122,6 +122,7 @@ const ListTeachers = () => {
         setIsLoading(true)
         getTeachers().then(res => {
             const persons = res.data;
+            console.log(persons,"asfasfafasf")
             setUsers(persons);
             setIsLoading(false)
         })

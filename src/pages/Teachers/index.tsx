@@ -4,18 +4,23 @@ import React, {useState} from "react";
 import axios from "axios"
 import TeacherContent from './components/TeacherContent';
 import {Oval} from "react-loader-spinner";
-import {withRouter, useParams} from "react-router-dom";
+import {withRouter, useParams, useLocation} from "react-router-dom";
 import { parseJsonText } from 'typescript';
 
 const getTeachers = async () => {
     return await axios.get(`http://127.0.0.1:8000/api/teachers`)
 }
 
-const TeacherPage = (id: { params: { id: string; }; }) => {
+const TeacherPage = (props:any) => {
     // console.log(useParams());
     // console.log(history.params.id)
-    const idpar = Number.parseInt(id.params.id);
-    //const {id} = useParams();
+    //const idpar = Number.parseInt(id.params.id);
+    console.log(props)
+    const a = useLocation();
+    //@ts-ignore
+    const id = Number(a.state.id);
+    console.log(a)
+    //console.log(id)
     const [users, setUsers]: any[] = useState([])
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
@@ -28,25 +33,24 @@ const TeacherPage = (id: { params: { id: string; }; }) => {
         })
     }, [])
 
-    //const teachercontent = users.find((teacher: any) => Number.parseInt(teacher.id) == idpar);
-    const teachercontent = users[idpar]
-    // if (teachercontent === undefined) {
-    //     return (
-    //         <div style={{
-    //             position: "fixed",
-    //             inset: 0,
-    //             display: 'flex',
-    //             alignItems: "center",
-    //             justifyContent: "center",
-    //             zIndex: 1000,
-    //             background: 'white'
-    //         }}>
-    //             Нет такого учителя
-    //         </div>
-    //     )
-    // }
+    const teachercontent = users.find((teacher: any) => Number.parseInt(teacher.user.id) == id);
+   // const teachercontent = users[id]
+    if (teachercontent === undefined && !isLoading) {
+        return (
+            <div style={{
+                position: "fixed",
+                inset: 0,
+                display: 'flex',
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 1000,
+                background: 'white'
+            }}>
+                Нет такого учителя
+            </div>
+        )
+    }
     console.log(users)
-    console.log(idpar)
     return (
         <div className={"teacher-wrapper"}>
             <div className={"teacher-grid"}>
@@ -81,7 +85,7 @@ const TeacherPage = (id: { params: { id: string; }; }) => {
                         projects_count={teachercontent.projects_count}
                         conferences_count={teachercontent.conferences_count}
                         diploma_projects_count={teachercontent.diploma_projects_count}
-                        regalias={teachercontent.regalias}
+                        regalias={teachercontent.regalias.name}
                         education_level={teachercontent.education_level.name}
                         professional_interests={teachercontent.professional_interests}
                         dissertation_proof={teachercontent.dissertation_proof}

@@ -25,7 +25,7 @@ const Teacher = (props: TeacherProps) => {
     } = props
 
     return (
-        <div className="department-history-wrapper-people" onClick={() => history.push(`/teacher/${id}`)}>
+        <div className="department-history-wrapper-people" onClick={() => history.push(`/teacher/{$id}`,{id:id})}>
             <div className="department-history-wrapper-image-people">
                 <BurgerSVGsm className={'burger-back'} />
                 <BorderSVGsm className={'border-back'} />

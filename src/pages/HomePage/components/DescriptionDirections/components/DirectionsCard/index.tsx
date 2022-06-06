@@ -2,23 +2,22 @@ import React from "react";
 import "./index.css";
 
 interface DirectionsCardProps {
-    typeInfo?: "line" | "grid"
+    typeInfo?: "line" | "grid" 
 }
 
-const DirectionsCard = (props: DirectionsCardProps) => {
+const DirectionsCard = (props:any) => {
 
     const {typeInfo = "line"} = props;
 
     return (
         <div className={"directions-card"}>
-            <div className={"directions-card-title"}><span>6.44.03.01 - БАКАЛАВРИАТ</span></div>
+            <div className={"directions-card-title"}><span>{props.qualification}</span></div>
             <div>
                 <div className={"directions-card-sub_title"}>
-                    <span>Направление</span> - Педагогическое образование
+                    <span>Направление</span> - {props.direction}
                 </div>
                 <div className={"directions-card-sub_title"}>
-                    <span>Профиль</span> - Информатика и информационные
-                    технологий в образовании
+                    <span>Профиль</span> - {props.profile}
                 </div>
             </div>
             {typeInfo === "grid" ? (
@@ -41,8 +40,8 @@ const DirectionsCard = (props: DirectionsCardProps) => {
                 </div>
             ) : (
                 <div className={"directions-card-line"}>
-                    <span>2 года (очно)</span> или <span>2 года 3 месяца (заочно)</span> срок освоения
-                    <span>- договор</span>
+                    <span>{props.term}</span> срок освоения
+                    <span> - договор</span>
                 </div>
             )}
         </div>
