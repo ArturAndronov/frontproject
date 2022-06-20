@@ -19,6 +19,8 @@ interface TeacherMoreProps {
   professional_interests?: string,
   dissertation_proof?: string,
   regalias?: Array<any>,
+  regalias1?:string,
+  roles?:string,
 }
 
 const TeacherContent = (props: TeacherMoreProps) => {
@@ -36,6 +38,8 @@ const TeacherContent = (props: TeacherMoreProps) => {
     professional_interests,
     dissertation_proof,
     regalias,
+    regalias1,
+    roles
 
   } = props
 
@@ -91,6 +95,7 @@ const TeacherContent = (props: TeacherMoreProps) => {
               <div className={'teachers-info-people-name-firstName'}>{firstName}</div>
               <div className={'teachers-info-people-name-secondName'}>{secondName}</div>
             </div>
+            <div className={'info-people-name-regalias'}>{roles},{regalias1}</div>
           </div>
           {/* <div className={'info-people-status'}>{status}</div> */}
           <div className={'teachers-project-container'}>
@@ -146,7 +151,7 @@ const TeacherContent = (props: TeacherMoreProps) => {
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
           <div className='teachers-more-info'>
-              <div>Ученая степень и звание:<span>{regalias}</span></div>
+              <div>Ученая степень и звание:<span>{roles},{regalias1}</span></div>
               <div>Вид образования:<span>{education_level}</span></div>
               <div>Образование:<span></span></div>
               <div>Подтверждающий документ:<span></span></div>

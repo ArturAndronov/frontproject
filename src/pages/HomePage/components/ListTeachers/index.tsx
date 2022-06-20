@@ -117,6 +117,7 @@ const ListTeachers = () => {
     const [users, setUsers]: any[] = useState([])
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
+    
 
     useEffect(() => {
         setIsLoading(true)
@@ -135,6 +136,8 @@ const ListTeachers = () => {
           lastName={teacher.user.surname}
           secondName={teacher.user.patronymic}
           img={teacher.avatar_path}
+          //roles={teacher.user.roles[1].name}
+          //regalias1={teacher.regalias[0].name}
       />)
 
   );

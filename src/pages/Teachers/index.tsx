@@ -89,6 +89,9 @@ const TeacherPage = (props:any) => {
                         education_level={teachercontent.education_level.name}
                         professional_interests={teachercontent.professional_interests}
                         dissertation_proof={teachercontent.dissertation_proof}
+
+                        //roles={teachercontent.user.roles[1].name}
+                        //regalias1={teachercontent.regalias[0].name}
                     />
                 )}
             </div>

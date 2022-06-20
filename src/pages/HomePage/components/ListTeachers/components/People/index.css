@@ -94,7 +94,15 @@
     letter-spacing: 0.05em;
     color: #3E4554;
 }
+.info-people-name-regalias{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
 
+    color: #3E4554;
+}
 .info-people-status {
     font-family: 'Montserrat';
     font-style: normal;
