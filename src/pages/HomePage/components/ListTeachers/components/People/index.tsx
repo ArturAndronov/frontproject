@@ -44,7 +44,7 @@ const Teacher = (props: TeacherProps) => {
                 <div className={'info-people-name-firstName'}>{firstName}</div>
                 <div className={'info-people-name-secondName'}>{secondName}</div>
             </div>
-            <div className={'info-people-name-regalias'}>{roles}</div>
+            <div className={'info-people-name-regalias'}>{roles},{regalias1}</div>
             {/* <div className={'info-people-status'}>{status}</div> */}
         </div>
     </div>)
