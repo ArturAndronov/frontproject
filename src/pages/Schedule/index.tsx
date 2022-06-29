@@ -34,7 +34,7 @@ const Schedule = () => {
         <ScheduleContent
           groupname={schedule.group.name}
           day={schedule.day.name}
-          subject={schedule.regularity[0].subject.name}
+          subject={schedule.regularity[0]?.subject.name}
         />
     );
 

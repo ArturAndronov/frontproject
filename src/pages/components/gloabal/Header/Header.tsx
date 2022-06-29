@@ -4,12 +4,6 @@ import images from "../../../../assets/image";
 
 
 const Header = () => {
-    function supportsEmoji () {
-        const ctx:any = document.createElement("canvas").getContext("2d");
-        ctx.canvas.width = ctx.canvas.height = 1;
-        ctx.fillText("😗", -4, 4);
-        return ctx.getImageData(0, 0, 1, 1).data[3] > 0; // Not a transparent pixel
-      }
       
     return (
         <div className={'header-main-wrapper'}>
@@ -25,11 +19,11 @@ const Header = () => {
                         <button className="switch" onClick= { () =>{
                         window.localStorage.setItem('theme','white')
                         window.location.reload()
-                        }}>{supportsEmoji() ? 'ss' :'test'}</button>
+                        }}>Light🌕</button>
                         <button className="switch" onClick= { () =>{
                         window.localStorage.setItem('theme','dark')
                         window.location.reload()
-                        }}>🌙</button>
+                        }}>Dark🌙</button>
                         <button className="switch" onClick= { () =>{
                         window.localStorage.setItem('fon','font')
                         window.location.reload()

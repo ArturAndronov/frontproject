@@ -30,94 +30,94 @@ const ScheduleContent = (props: ScheduleMoreProps) => {
                 <th id="test">Дни недели:</th><th id="test">Номер пары</th><th id="test">Дисциплина / преподователь</th><th id="test">Номер аудитории</th>
                 </tr>
                 <tr>
-                    <th >{day}</th><th >1</th><th >1</th><th >1</th>
+                    <th >{day}</th><th >1</th><th >{subject}</th><th >1</th>
                 </tr>
                 <tr>
-                    <th ></th><th >2</th><th >2</th><th >2</th>
+                    <th ></th><th >2</th><th >{subject}</th><th >2</th>
                 </tr>
                 <tr>
-                    <th ></th><th >3</th><th >3</th><th >3</th>
+                    <th ></th><th >3</th><th >{subject}</th><th >3</th>
                 </tr>
                 <tr>
-                    <th ></th><th >4</th><th >4</th><th >4</th>
+                    <th ></th><th >4</th><th >{subject}</th><th >4</th>
                 </tr>
                 <tr>
-                    <th ></th><th >5</th><th >5</th><th >5</th>
+                    <th ></th><th >5</th><th >{subject}</th><th >5</th>
                 </tr>
                 <tr>
-                    <th >{day}</th><th >1</th><th >1</th><th >1</th>
+                    <th >{day}</th><th >1</th><th >{subject}</th><th >1</th>
                 </tr>
                 <tr>
-                    <th ></th><th >2</th><th >2</th><th >2</th>
+                    <th ></th><th >2</th><th >{subject}</th><th >2</th>
                 </tr>
                 <tr>
-                    <th ></th><th >3</th><th >3</th><th >3</th>
+                    <th ></th><th >3</th><th >{subject}</th><th >3</th>
                 </tr>
                 <tr>
-                    <th ></th><th >4</th><th >4</th><th >4</th>
+                    <th ></th><th >4</th><th >{subject}</th><th >4</th>
                 </tr>
                 <tr>
-                    <th ></th><th >5</th><th >5</th><th >5</th>
+                    <th ></th><th >5</th><th >{subject}</th><th >5</th>
                 </tr>
                 <tr>
-                    <th >{day}</th><th >1</th><th >1</th><th >1</th>
+                    <th >{day}</th><th >1</th><th >{subject}</th><th >1</th>
                 </tr>
                 <tr>
-                    <th ></th><th >2</th><th >2</th><th >2</th>
+                    <th ></th><th >2</th><th >{subject}</th><th >2</th>
                 </tr>
                 <tr>
-                    <th ></th><th >3</th><th >3</th><th >3</th>
+                    <th ></th><th >3</th><th >{subject}</th><th >3</th>
                 </tr>
                 <tr>
-                    <th ></th><th >4</th><th >4</th><th >4</th>
+                    <th ></th><th >4</th><th >{subject}</th><th >4</th>
                 </tr>
                 <tr>
-                    <th ></th><th >5</th><th >5</th><th >5</th>
+                    <th ></th><th >5</th><th >{subject}</th><th >5</th>
                 </tr>
                 <tr>
-                    <th >{day}</th><th >1</th><th >1</th><th >1</th>
+                    <th >{day}</th><th >1</th><th >{subject}</th><th >1</th>
                 </tr>
                 <tr>
-                    <th ></th><th >2</th><th >2</th><th >2</th>
+                    <th ></th><th >2</th><th >{subject}</th><th >2</th>
                 </tr>
                 <tr>
-                    <th ></th><th >3</th><th >3</th><th >3</th>
+                    <th ></th><th >3</th><th >{subject}</th><th >3</th>
                 </tr>
                 <tr>
-                    <th ></th><th >4</th><th >4</th><th >4</th>
+                    <th ></th><th >4</th><th >{subject}</th><th >4</th>
                 </tr>
                 <tr>
-                    <th ></th><th >5</th><th >5</th><th >5</th>
+                    <th ></th><th >5</th><th >{subject}</th><th >5</th>
                 </tr>
                 <tr>
-                    <th >{day}</th><th >1</th><th >1</th><th >1</th>
+                    <th >{day}</th><th >1</th><th >{subject}</th><th >1</th>
                 </tr>
                 <tr>
-                    <th ></th><th >2</th><th >2</th><th >2</th>
+                    <th ></th><th >2</th><th >{subject}</th><th >2</th>
                 </tr>
                 <tr>
-                    <th ></th><th >3</th><th >3</th><th >3</th>
+                    <th ></th><th >3</th><th >{subject}</th><th >3</th>
                 </tr>
                 <tr>
-                    <th ></th><th >4</th><th >4</th><th >4</th>
+                    <th ></th><th >4</th><th >{subject}</th><th >4</th>
                 </tr>
                 <tr>
-                    <th ></th><th >5</th><th >5</th><th >5</th>
+                    <th ></th><th >5</th><th >{subject}</th><th >5</th>
                 </tr>
                 <tr>
-                    <th >{day}</th><th >1</th><th >1</th><th >1</th>
+                    <th >{day}</th><th >1</th><th >{subject}</th><th >1</th>
                 </tr>
                 <tr>
-                    <th ></th><th >2</th><th >2</th><th >2</th>
+                    <th ></th><th >2</th><th >{subject}</th><th >2</th>
                 </tr>
                 <tr>
-                    <th ></th><th >3</th><th >3</th><th >3</th>
+                    <th ></th><th >3</th><th >{subject}</th><th >3</th>
                 </tr>
                 <tr>
-                    <th ></th><th >4</th><th >4</th><th >4</th>
+                    <th ></th><th >4</th><th >{subject}</th><th >4</th>
                 </tr>
                 <tr>
-                    <th ></th><th >5</th><th >5</th><th >5</th>
+                    <th ></th><th >5</th><th >{subject}</th><th >5</th>
                 </tr>
             
             {/* <tr>

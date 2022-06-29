@@ -11,6 +11,7 @@ interface TeacherProps {
     secondName?: string,
     img?: string,
     status?: string,
+    teacher_position?: string,
     regalias1?:string,
     roles?:Array<any>,
 }
@@ -26,10 +27,9 @@ const Teacher = (props: TeacherProps) => {
         secondName,
         img,
         regalias1,
+        teacher_position,
         roles
     } = props
-
-    if (rolesTrue) {
         return (<div className="department-history-wrapper-people" onClick={() => history.push(`/teacher/{$id}`,{id:id})}>
         <div className="department-history-wrapper-image-people">
             <BurgerSVGsm className={'burger-back'} />
@@ -44,29 +44,10 @@ const Teacher = (props: TeacherProps) => {
                 <div className={'info-people-name-firstName'}>{firstName}</div>
                 <div className={'info-people-name-secondName'}>{secondName}</div>
             </div>
-            <div className={'info-people-name-regalias'}>{roles},{regalias1}</div>
+            <div className={'info-people-name-regalias'}>{teacher_position}, {roles}, {regalias1}</div>
             {/* <div className={'info-people-status'}>{status}</div> */}
         </div>
     </div>)
-      }
-      return (<div className="department-history-wrapper-people" onClick={() => history.push(`/teacher/{$id}`,{id:id})}>
-      <div className="department-history-wrapper-image-people">
-          <BurgerSVGsm className={'burger-back'} />
-          <BorderSVGsm className={'border-back'} />
-          <div className={'department-history-image-people'}>
-              <img src={img} />
-          </div>
-      </div>
-      <div className="department-history-wrapper-info-people">
-          <div className={'info-people-lastName'}>{lastName}</div>
-          <div className={'name-container'}>
-              <div className={'info-people-name-firstName'}>{firstName}</div>
-              <div className={'info-people-name-secondName'}>{secondName}</div>
-          </div>
-          <div className={'info-people-name-regalias'}></div>
-          {/* <div className={'info-people-status'}>{status}</div> */}
-      </div>
-  </div>)
     }
 
     

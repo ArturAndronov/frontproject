@@ -44,6 +44,9 @@
     .description-directions-cards {
         padding: 0;
     }
+    .directions-card{
+        width: 350px;
+    }
 
 }
 
@@ -63,7 +66,7 @@
 
     .directions-card {
         gap: 20px;
-         max-width: unset;
+        max-width: unset;
     }
 
     .description-directions-title {

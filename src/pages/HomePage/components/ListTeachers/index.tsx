@@ -136,8 +136,9 @@ const ListTeachers = () => {
           lastName={teacher.user.surname}
           secondName={teacher.user.patronymic}
           img={teacher.avatar_path}
-          roles={teacher?.user?.roles[1]?.name ?? ""}
-          regalias1={teacher?.regalias[0]?.name ?? ""}
+          roles={teacher.user.roles[1]?.name}
+          regalias1={teacher.regalias[0]?.name}
+          teacher_position={teacher.teacher_position?.name}
       />)
 
   );

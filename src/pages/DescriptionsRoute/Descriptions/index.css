@@ -90,7 +90,7 @@
         margin-right: 0;
         margin-bottom: 140px;
     }
-    .directions-card {
+    .description-destination-cards {
         width: auto;
         margin-left: 150px;
     }
@@ -100,7 +100,7 @@
     .destination {
         padding: 60px 15px !important;
     }
-    .directions-card {
+    .description-destination-cards {
         width: auto;
         margin-left: 0px;
     }

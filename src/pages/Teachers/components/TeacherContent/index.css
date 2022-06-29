@@ -174,7 +174,6 @@
         border-bottom: 3px solid #D3DBE6;
     }
     .teachers-more-info{
-        display: inline-block;
         width: 540px;
     }
     .teachers-more-info span{
@@ -192,7 +191,6 @@
 
     }
     .teachers-interests{
-        display: inline-block;
         margin-left: 60px;
 
     }
@@ -338,7 +336,7 @@
     height: 100%;
   }
   .active-content {
-    display: block;
+    display: flex;
     background-color: #F1F9FF;
     padding: 0px 165px;
 
@@ -474,6 +472,9 @@
 }
 
 @media (max-width: 450px) {
+  .active-tabs::before {
+    top:10px;
+  }
   .teachers-wrapper-title {
     padding: 60px 0px 10px 5px;
     flex-direction: column;
@@ -543,8 +544,9 @@
     width: auto;
   }
   .teacher-interests-scientific {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 5px;
+    font-size: 9px;
   }
   
 }

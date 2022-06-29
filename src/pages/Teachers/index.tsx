@@ -85,7 +85,7 @@ const TeacherPage = (props:any) => {
                         projects_count={teachercontent.projects_count}
                         conferences_count={teachercontent.conferences_count}
                         diploma_projects_count={teachercontent.diploma_projects_count}
-                        regalias={teachercontent.regalias.name}
+                        teacher_position={teachercontent.teacher_position.name}
                         education_level={teachercontent.education_level.name}
                         professional_interests={teachercontent.professional_interests}
                         dissertation_proof={teachercontent.dissertation_proof}
